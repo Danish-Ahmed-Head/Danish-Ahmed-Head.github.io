@@ -87,6 +87,16 @@ nav{
   padding:0.55rem 1.4rem;border-radius:2px;transition:all 0.25s;
 }
 .nav-cta:hover{background:var(--gold);color:var(--ivory);}
+.nav-toggle{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:42px;height:42px;padding:9px;background:none;border:none;cursor:pointer;z-index:600;
+}
+.nav-toggle span{display:block;width:100%;height:2px;background:var(--navy);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-overlay{position:fixed;inset:0;background:rgba(13,27,46,0.35);opacity:0;pointer-events:none;transition:opacity 0.33s;z-index:450;}
+.nav-overlay.open{opacity:1;pointer-events:auto;}
 
 /* HERO */
 .hero{
@@ -664,7 +674,19 @@ section{padding:7rem 4rem;}
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
-  .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .nav-cta{display:none;}
+  .nav-links{
+    position:fixed;top:0;right:0;height:100vh;width:min(80vw,300px);
+    flex-direction:column;align-items:flex-start;gap:1.6rem;
+    padding:5rem 1.8rem 2rem;margin:0;
+    background:rgba(249,245,238,0.98);backdrop-filter:blur(24px);
+    border-left:1px solid rgba(201,168,76,0.18);
+    box-shadow:-12px 0 48px rgba(0,0,0,0.15);
+    transform:translateX(105%);transition:transform 0.33s ease;
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{font-size:0.95rem;}
   .hero{grid-template-columns:1fr;padding:6.5rem 1.5rem 3rem;}
   .hero-bg,.hero-right,.hero-badge2{display:none;}
   section{padding:4rem 1.5rem;}
@@ -1421,7 +1443,11 @@ section{padding:7rem 4rem;}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:danish.ahmed.1623@gmail.com" class="nav-cta">Hire Me</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -1537,25 +1563,6 @@ section{padding:7rem 4rem;}
 
   <div class="timeline">
 
-    <!-- Turing -->
-    <div class="t-item reveal">
-      <div class="t-date">
-        <div class="t-date-range">Jan 2026<br>Apr 2026</div>
-        <div class="t-date-co">Turing</div>
-      </div>
-      <div class="t-spine"><div class="t-dot"></div><div class="t-line"></div></div>
-      <div class="t-content">
-        <div class="t-role">Business Analyst — AI Quality Evaluator</div>
-        <div class="t-company">Turing</div>
-        <div class="t-meta">Remote · 40 hrs/week · GHD AI Quality Benchmark Project</div>
-        <ul class="t-bullets">
-          <li>Conducted structured side-by-side evaluations of LLM outputs against the GHD quality benchmark — assessing accuracy, coherence, and factual integrity across hundreds of samples per week.</li>
-          <li>Performed systematic hallucination detection and fact-checking, documenting structured justifications for every evaluation decision to build a traceable audit trail for model improvement cycles.</li>
-          <li>Maintained strict daily output quotas in a high-throughput remote environment; developed rigorous QA instincts for identifying precisely where LLMs fail at domain-specific reasoning.</li>
-        </ul>
-      </div>
-    </div>
-
     <!-- Freelance AI Developer -->
     <div class="t-item reveal">
       <div class="t-date">
@@ -1577,6 +1584,25 @@ section{padding:7rem 4rem;}
           <span class="t-stack-tag">Hetzner VPS</span><span class="t-stack-tag">Telegram Bot API</span>
           <span class="t-stack-tag">OpenAI Whisper</span><span class="t-stack-tag">Node.js</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Turing -->
+    <div class="t-item reveal">
+      <div class="t-date">
+        <div class="t-date-range">Jan 2026<br>Apr 2026</div>
+        <div class="t-date-co">Turing</div>
+      </div>
+      <div class="t-spine"><div class="t-dot"></div><div class="t-line"></div></div>
+      <div class="t-content">
+        <div class="t-role">Business Analyst — AI Quality Evaluator</div>
+        <div class="t-company">Turing</div>
+        <div class="t-meta">Remote · 40 hrs/week · GHD AI Quality Benchmark Project</div>
+        <ul class="t-bullets">
+          <li>Conducted structured side-by-side evaluations of LLM outputs against the GHD quality benchmark — assessing accuracy, coherence, and factual integrity across hundreds of samples per week.</li>
+          <li>Performed systematic hallucination detection and fact-checking, documenting structured justifications for every evaluation decision to build a traceable audit trail for model improvement cycles.</li>
+          <li>Maintained strict daily output quotas in a high-throughput remote environment; developed rigorous QA instincts for identifying precisely where LLMs fail at domain-specific reasoning.</li>
+        </ul>
       </div>
     </div>
 
@@ -2087,6 +2113,27 @@ function toggleOCFaq(btn) {
 window.addEventListener('DOMContentLoaded', function () {
   if (window.location.hash === '#openclaw') openOCPage();
 });
+
+// Mobile hamburger menu
+(function () {
+  var toggle  = document.getElementById('navToggle');
+  var links   = document.querySelector('.nav-links');
+  var overlay = document.getElementById('navOverlay');
+  if (!toggle || !links) return;
+  function setOpen(open) {
+    links.classList.toggle('open', open);
+    toggle.classList.toggle('open', open);
+    if (overlay) overlay.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  toggle.addEventListener('click', function () { setOpen(!links.classList.contains('open')); });
+  if (overlay) overlay.addEventListener('click', function () { setOpen(false); });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { setOpen(false); });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
 </script>
 
 <!-- ═══════════════════════════════════════════
