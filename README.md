@@ -1,4 +1,4 @@
-# Danish Ahmed — Portfolio
+# Danish Ahmed, Portfolio
 
 **AI Engineer & Systems Architect** · Karachi, Pakistan
 Building production AI agents, ML pipelines, and automation systems that ship.
@@ -9,7 +9,7 @@ Building production AI agents, ML pipelines, and automation systems that ship.
 
 ## About
 
-I build production systems, not prototypes — custom AI agents, RAG assistants, and
+I build production systems, not prototypes, custom AI agents, RAG assistants, and
 end-to-end automation deployed on hardened infrastructure. Available for global remote roles
 (USA, Canada, Europe, UAE) and freelance AI builds.
 
