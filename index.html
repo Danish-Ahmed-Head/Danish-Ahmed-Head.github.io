@@ -1448,7 +1448,7 @@ section{padding:7rem 4rem;}
     <li><a href="#skills">Expertise</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#openclaw" onclick="openOCPage(event)">OpenClaw</a></li><li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:danish.ahmed.1623@gmail.com" class="nav-cta">Hire Me</a>
@@ -1582,7 +1582,7 @@ section{padding:7rem 4rem;}
       <div class="t-content">
         <div class="t-role">Freelance AI Systems Developer</div>
         <div class="t-company">Self-Employed · Ongoing Maintenance Retainer</div>
-        <div class="t-meta">Client: Stevie J Travel Publishing, Las Vegas · Remote</div>
+        <div class="t-meta">Client: Stevie J Travel Inc., Las Vegas · Remote</div>
         <ul class="t-bullets">
           <li>Architected and deployed <strong>OpenClaw</strong>, a 24/7 AI publishing assistant on a hardened Hetzner VPS (Ubuntu 24.04) in Docker, integrating Anthropic Claude API with a Telegram bot; delivered all 27 Phase 1 deliverables in 3 days vs. a 2-week estimate.</li>
           <li>Hardened the server end-to-end: Tailscale private networking, SSH key-only auth, UFW firewall, Fail2ban brute-force protection, non-root Docker user, zero credentials stored in config files.</li>
@@ -1782,7 +1782,7 @@ section{padding:7rem 4rem;}
       <div>
         <div>
           <span class="oc-live-badge"><span class="oc-live-dot"></span>Live in Production</span>
-          <span class="oc-client-tag">✦ Stevie J Travel Publishing · Las Vegas</span>
+          <span class="oc-client-tag">✦ Stevie J Travel Inc. · Las Vegas</span>
         </div>
         <h3 class="proj-name">OpenClaw, AI Automation System</h3>
         <p class="proj-sub">24/7 Autonomous Publishing & Business Assistant</p>
@@ -1814,7 +1814,7 @@ section{padding:7rem 4rem;}
           <span>OpenAI Whisper</span><span>Node.js</span>
           <span>Tailscale</span><span>Fail2ban</span>
         </div>
-        <a href="#projects" class="proj-link">
+        <a href="#openclaw" class="proj-link" onclick="openOCPage(event)">
           View Full Case Study
         </a>
       </div>
@@ -2149,11 +2149,424 @@ window.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 
-<!-- The embedded OpenClaw case-study page was removed on 2026-07-27.
-     It published a client's live email addresses, their server tier and
-     hosting region, their Telegram bot handle, and their itemised contract
-     pricing. None of that was ours to publish. Any replacement must describe
-     the work without naming the client's infrastructure or contacts. -->
+<!-- ═══════════════════════════════════════════
+     OPENCLAW, EMBEDDED PROJECT PAGE
+     ═══════════════════════════════════════════ -->
+<div id="openclaw" style="display:none;">
+
+  <!-- ── OC NAV ── -->
+  <div class="oc-nav">
+    <div class="oc-nav-brand">
+      <div class="oc-nav-icon">OC</div>
+      <div class="oc-nav-name">Open<span>Claw</span></div>
+    </div>
+    <ul class="oc-nav-links">
+      <li><a href="#" onclick="event.preventDefault();document.getElementById('oc-live').scrollIntoView({behavior:'smooth'})">Live System</a></li>
+      <li><a href="#" onclick="event.preventDefault();document.getElementById('oc-how').scrollIntoView({behavior:'smooth'})">How It Works</a></li>
+      <li><a href="#" onclick="event.preventDefault();document.getElementById('oc-features').scrollIntoView({behavior:'smooth'})">Features</a></li>
+      <li><a href="#" onclick="event.preventDefault();document.getElementById('oc-case').scrollIntoView({behavior:'smooth'})">Case Study</a></li>
+    </ul>
+    <button class="oc-nav-back" onclick="closeOCPage()">← Portfolio</button>
+  </div>
+
+  <!-- ── HERO ── -->
+  <div class="oc-hero">
+    <div class="oc-grid-bg"></div>
+    <div class="oc-orb oc-orb1"></div>
+    <div class="oc-orb oc-orb2"></div>
+    <div class="oc-orb oc-orb3"></div>
+
+    <div class="oc-hero-layout">
+      <!-- LEFT: Copy -->
+      <div>
+        <div class="oc-badge">
+          <span class="oc-badge-dot"></span>
+          Live in Production · Las Vegas, USA
+        </div>
+        <h1 class="oc-h1">
+          Your Business,<br>
+          <em>Running Itself</em><br>
+, 24 Hours a Day
+        </h1>
+        <p class="oc-hero-sub">
+          OpenClaw connects AI to your existing tools, email, Telegram, WhatsApp, documents, 
+          and automates the repetitive work that consumes your team's time.
+          Built in days, not months. Running in production, not in theory.
+        </p>
+        <div class="oc-hero-btns">
+          <a href="https://calendly.com/danish-ahmed-1623/ai-publishing-assistant-free-15-min-discovery-call" target="_blank" rel="noopener" class="oc-btn-gold">
+            📅 Book a Free Discovery Call
+          </a>
+          <a href="#" class="oc-btn-outline" onclick="event.preventDefault();document.getElementById('oc-how').scrollIntoView({behavior:'smooth'})">
+            See How It Works →
+          </a>
+        </div>
+        <div class="oc-proof">
+          <div class="oc-proof-item"><div class="oc-proof-num">27</div><div class="oc-proof-lbl">Certified<br>Deliverables</div></div>
+          <div class="oc-proof-item"><div class="oc-proof-num">3</div><div class="oc-proof-lbl">Days to<br>Deploy</div></div>
+          <div class="oc-proof-item"><div class="oc-proof-num">17</div><div class="oc-proof-lbl">Features<br>Live Now</div></div>
+          <div class="oc-proof-item"><div class="oc-proof-num">10</div><div class="oc-proof-lbl">Royalty<br>Platforms</div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Live widget -->
+      <div class="oc-hero-widget">
+        <div class="oc-widget-glow"></div>
+        <div class="oc-widget">
+          <div class="oc-widget-bar">
+            <div class="oc-wb-dot" style="background:#FF5F56;"></div>
+            <div class="oc-wb-dot" style="background:#FFBD2E;margin-left:3px;"></div>
+            <div class="oc-wb-dot" style="background:#27C93F;margin-left:3px;"></div>
+            <span class="oc-wb-title">stevie@vps</span>
+            <div class="oc-wb-live"><span class="oc-wb-live-dot"></span>LIVE</div>
+          </div>
+          <div class="oc-widget-body">
+            <div class="oc-wline"><span class="oc-wp">$</span><span class="oc-wt">stevie status --all</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wg">✓ Gmail · IONOS · AOL, active</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wg">✓ Briefing sent, 07:00 Las Vegas</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wg">✓ D2D queue, 3 guides filled</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wg">✓ Voice, Twilio · active</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wgold">✓ Royalties, 10 platforms OK</span></div>
+            <div class="oc-wline"><span class="oc-wp"> </span><span class="oc-wg">✓ 1,015+ guides indexed</span></div>
+            
+            <div class="oc-wline"><span class="oc-wp">$</span><span class="oc-wt">_<span class="oc-wcursor"></span></span></div>
+          </div>
+          <div class="oc-widget-footer">
+            <div class="oc-wf-stat"><span class="oc-wf-label">Container</span><span class="oc-wf-val">openclaw</span></div>
+            <div class="oc-wf-stat"><span class="oc-wf-label">Node.js</span><span class="oc-wf-val">v22.22.0</span></div>
+            <div class="oc-wf-stat"><span class="oc-wf-label">Model</span><span class="oc-wf-val">claude-opus-4-6</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── LIVE SYSTEM ── -->
+  <div class="oc-section" id="oc-live">
+    <div class="oc-s-label"><span>Live System</span></div>
+    <h2 class="oc-s-title">Everything that is<br><em>running right now</em></h2>
+    <p class="oc-s-sub">All 17 features live on a private, hardened VPS, 24 hours a day.</p>
+    <table class="oc-live-table">
+      <thead><tr><th>Phase</th><th>Feature</th><th>Schedule</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Morning Briefing, weather, emails, headlines, publishing tip</td><td><span class="oc-sched">Daily 7:00am Las Vegas</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Web Search via Brave Search API</td><td><span class="oc-sched">On demand</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>IONOS inbox monitor</td><td><span class="oc-sched">Every 30 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Gmail inbox monitor</td><td><span class="oc-sched">Every 30 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Article, PDF & YouTube Summariser</td><td><span class="oc-sched">On demand</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Social Media Manager, Facebook, Instagram, TikTok, Twitter/X</td><td><span class="oc-sched">On demand</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Voice Interaction, OpenAI Whisper transcription</td><td><span class="oc-sched">Every 5 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Catalog Intelligence, 1,015+ guides loaded & queryable</td><td><span class="oc-sched">On demand</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Weekly Trend Report, trending destinations vs. catalog</td><td><span class="oc-sched">Monday 7:05am Las Vegas</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Proactive Heartbeat, urgent email detection</td><td><span class="oc-sched">Every 30 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Royalty Monitor, 10 platforms</td><td><span class="oc-sched">Every hour</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>Voice Notes to Guide Drafts, Plaud Note Pro pipeline</td><td><span class="oc-sched">Every 5 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 1 & 2</span></td><td>OneDrive Integration & nightly catalog backup</td><td><span class="oc-sched">Daily 2:00am</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 3</span></td><td>Voice Upgrade, Telegram TTS + "Hey Stevie" wake word + Twilio voice line</td><td><span class="oc-sched">Always on</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 4</span></td><td>D2D Browser Automation, overnight metadata fill for all queued guides</td><td><span class="oc-sched">11pm nightly</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 5</span></td><td>Second Brain, idea filing, 6-point market scoring, catalog cross-check, top 3 every Monday</td><td><span class="oc-sched">Instant + Monday</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+        <tr><td><span class="oc-live-tag oc-tag-phase">Phase 6</span></td><td>AOL inbox added to unified monitoring</td><td><span class="oc-sched">Every 30 mins</span></td><td><span class="oc-live-tag oc-tag-live">✓ Live</span></td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── PROBLEM ── -->
+  <div class="oc-section">
+    <div class="oc-s-label"><span>The Problem</span></div>
+    <h2 class="oc-s-title">Your team is doing work<br>that <em>AI should be doing</em></h2>
+    <p class="oc-s-sub">Every hour spent on repetitive tasks is an hour not spent on growth.</p>
+    <div class="oc-prob-grid">
+      <div class="oc-prob-card"><div class="oc-prob-icon">📧</div><div class="oc-prob-title">Inbox overload, every day</div><div class="oc-prob-desc">Manually reading, sorting, and replying to hundreds of emails. AI handles 80% of that, instantly, at any hour, across all your inboxes at once.</div></div>
+      <div class="oc-prob-card"><div class="oc-prob-icon">📋</div><div class="oc-prob-title">Leads falling through the cracks</div><div class="oc-prob-desc">WhatsApp and email enquiries going unanswered for hours. Every delayed response is a lost sale. AI responds in seconds, 24 hours a day.</div></div>
+      <div class="oc-prob-card"><div class="oc-prob-icon">🗂</div><div class="oc-prob-title">Documents & reports by hand</div><div class="oc-prob-desc">Generating offers, drafting reports, filling metadata forms manually. These are exactly the tasks AI was built for, and exactly what eats your week.</div></div>
+      <div class="oc-prob-card"><div class="oc-prob-icon">🔄</div><div class="oc-prob-title">Tools that don't talk to each other</div><div class="oc-prob-desc">CRM, email, WhatsApp, spreadsheets, they're islands. OpenClaw bridges them into a single flowing system that runs without your involvement.</div></div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── HOW IT WORKS ── -->
+  <div class="oc-section" id="oc-how">
+    <div class="oc-s-label"><span>How It Works</span></div>
+    <h2 class="oc-s-title">Discovery to deployment<br>in <em>days, not months</em></h2>
+    <div class="oc-how-grid">
+      <div class="oc-steps">
+        <div class="oc-step">
+          <div class="oc-step-num-wrap"><div class="oc-step-num">1</div><div class="oc-step-line"></div></div>
+          <div><div class="oc-step-title">Discovery Call, 30 Minutes</div><div class="oc-step-desc">Map your workflows, identify bottlenecks, define the highest-ROI automations for your specific business. Free, no pressure, no jargon.</div></div>
+        </div>
+        <div class="oc-step">
+          <div class="oc-step-num-wrap"><div class="oc-step-num">2</div><div class="oc-step-line"></div></div>
+          <div><div class="oc-step-title">Custom Build, 3 to 7 Days</div><div class="oc-step-desc">No templates. A bespoke AI system built around your tools, your voice, and your workflow, on hardened private infrastructure with full security from day one.</div></div>
+        </div>
+        <div class="oc-step">
+          <div class="oc-step-num-wrap"><div class="oc-step-num">3</div><div class="oc-step-line"></div></div>
+          <div><div class="oc-step-title">Go Live + Full Handover</div><div class="oc-step-desc">Your system goes live. You receive full documentation, a deployment runbook, testing guide, and a plain-English daily use guide so your team owns it confidently.</div></div>
+        </div>
+        <div class="oc-step">
+          <div class="oc-step-num-wrap"><div class="oc-step-num">4</div></div>
+          <div><div class="oc-step-title">Monthly Retainer, Grow & Expand</div><div class="oc-step-desc">Ongoing improvements, new phases, priority support. Your automation compounds as your business grows, exactly as OpenClaw did from Phase 1 through Phase 6.</div></div>
+        </div>
+      </div>
+      <div class="oc-terminal">
+        <div class="oc-term-bar2">
+          <div class="oc-tbar-dot" style="background:#FF5F56;"></div>
+          <div class="oc-tbar-dot" style="background:#FFBD2E;margin-left:3px;"></div>
+          <div class="oc-tbar-dot" style="background:#27C93F;margin-left:3px;"></div>
+          <span class="oc-tbar-title">stevie@vps · live</span>
+        </div>
+        <div class="oc-tbody">
+          <div class="oc-tline"><span class="tp">$</span><span class="tc">docker ps --format "{{.Names}} {{.Status}}"</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">openclaw Up 47 days</span></div>
+          <div class="oc-tline"><span class="tp">$</span><span class="tc">stevie status --full</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">✓ Gmail + IONOS + AOL: monitoring</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">✓ Morning briefing: 07:00 delivered</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">✓ D2D: 3 guides filled overnight</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">✓ Voice line: active</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tgold">✓ Royalties: 10 platforms OK</span></div>
+          <div class="oc-tline"><span class="tp"> </span><span class="tg">✓ Catalog: 1,015+ guides indexed</span></div>
+          
+          <div class="oc-tline"><span class="tp">$</span><span class="tc">_<span class="oc-cursor2"></span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── FEATURES ── -->
+  <div class="oc-section" id="oc-features">
+    <div class="oc-s-label"><span>Capabilities</span></div>
+    <h2 class="oc-s-title">Everything your<br><em>AI system</em> can do</h2>
+    <p class="oc-s-sub">Every feature listed here is running in production for a real client. Not a demo. Not a prototype. Production AI.</p>
+    <div class="oc-feat-grid">
+      <div class="oc-feat"><div class="oc-feat-icon">✉</div><div class="oc-feat-title">Multi-Inbox Email</div><div class="oc-feat-desc">Gmail, IONOS, and AOL monitored every 30 mins. Urgent emails flagged immediately. Draft replies from any account, all via Telegram.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">🎙</div><div class="oc-feat-title">Full Voice Layer</div><div class="oc-feat-desc">Telegram voice notes, "Hey Stevie" wake word on Mac Mini, and live phone calls via Twilio, speak from anywhere, hear back in a natural American voice. Accuracy: reliable.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">🤖</div><div class="oc-feat-title">Browser Automation</div><div class="oc-feat-desc">Stevie logs into Draft2Digital overnight and fills every metadata field, title, BISAC, keywords, description, for every queued guide. You review and click Publish in the morning.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">📚</div><div class="oc-feat-title">Catalog Intelligence</div><div class="oc-feat-desc">1,015+ guides fully indexed. Ask anything about your catalog, coverage gaps, topic overlap, trending destinations. Instant answers, no searching.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">🧠</div><div class="oc-feat-title">Second Brain</div><div class="oc-feat-desc">Speak or type any idea, Stevie files it, scores market potential (6-point system with Brave Search + catalog gap analysis), and surfaces the top 3 every Monday.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">💰</div><div class="oc-feat-title">Royalty Monitor</div><div class="oc-feat-desc">10 distribution platforms checked every hour. Payment confirmation emails detected automatically. Alerts sent to Telegram, no manual platform-hopping ever again.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">📱</div><div class="oc-feat-title">Social Media Manager</div><div class="oc-feat-desc">AI-drafted posts for Facebook, Instagram, TikTok, and Twitter/X, in your voice, on demand, ready to approve and post. No copywriter required.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">📊</div><div class="oc-feat-title">Weekly Trend Report</div><div class="oc-feat-desc">Every Monday 7:05am, trending travel destinations cross-referenced against your catalog. Publishing opportunities surfaced before competitors see them.</div></div>
+      <div class="oc-feat"><div class="oc-feat-icon">🔒</div><div class="oc-feat-title">Hardened Infrastructure</div><div class="oc-feat-desc">SSH key-only, UFW firewall, Fail2ban, Tailscale private networking, non-root Docker, localhost-only binding. Protected against CVE-2026-25253, verified.</div></div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── CASE STUDY ── -->
+  <div class="oc-section" id="oc-case">
+    <div class="oc-s-label"><span>Case Study · Verified</span></div>
+    <h2 class="oc-s-title">Real results from a<br><em>real deployment</em></h2>
+    <div class="oc-case">
+      <div>
+        <div class="oc-case-lbl">Client · Las Vegas, NV · USA</div>
+        <div class="oc-case-name">Stevie J Travel Inc.</div>
+        <p class="oc-case-desc">Stevie J Travel Inc. manages 1,015+ travel guides across 10 royalty platforms. Phase 1 shipped in 3 days against a 2-week estimate. The system has been running continuously ever since, expanded across 4 additional phases, each building on infrastructure already owned.</p>
+        <ul class="oc-case-pts">
+          <li>27 deliverables certified complete on March 3, 2026, 3 days vs. 2-week estimate</li>
+          <li>Phase 2, 13 further features, delivered and live by March 15, 2026</li>
+          <li>Phase 3, Voice: Telegram text-to-speech, a wake word, and a voice line</li>
+          <li>Phase 4, browser automation: overnight metadata fill for queued guides</li>
+          <li>Phase 5, Second Brain: idea capture with 6-point market scoring</li>
+          <li>Phase 6, a third inbox added to unified monitoring</li>
+          <li>Runs entirely on infrastructure the client already owned.</li>
+        </ul>
+        <p style="font-size:0.72rem;color:rgba(249,245,238,0.4);margin-top:1rem;font-style:italic;">Early case-study pricing, reduced setup fee in exchange for a public case study and testimonial. Current pricing is scope-based; see below.</p>
+      </div>
+      <div>
+        <div class="oc-quote">
+          <div class="oc-quote-text">"Delivered everything in 3 days. The system just runs, I don't think about it anymore."</div>
+          <div class="oc-quote-auth">Stevie J Travel Inc. · Las Vegas, NV</div>
+        </div>
+        <div class="oc-case-metrics">
+          <div class="oc-cm"><div class="oc-cm-val">3</div><div class="oc-cm-lbl">Days to Deploy<br>Phase 1</div></div>
+          <div class="oc-cm"><div class="oc-cm-val">27</div><div class="oc-cm-lbl">Certified<br>Deliverables</div></div>
+          <div class="oc-cm"><div class="oc-cm-val">17</div><div class="oc-cm-lbl">Live Features<br>Today</div></div>
+          <div class="oc-cm"><div class="oc-cm-val">10</div><div class="oc-cm-lbl">Royalty Platforms<br>Monitored</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DEMO / SEE IT LIVE ── -->
+  <div class="oc-section" id="oc-demo">
+    <div class="oc-s-label"><span>See It Live</span></div>
+    <h2 class="oc-s-title">See Stevie<br><em>in action</em></h2>
+    <div style="max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#0d1b2e 0%,#0a1524 100%);border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:3rem 2rem;">
+      <div style="font-size:2.2rem;margin-bottom:0.8rem;">🎬</div>
+      <p style="font-size:1.05rem;color:rgba(249,245,238,0.85);line-height:1.7;max-width:560px;margin:0 auto 1.6rem;">
+        Want to watch Stevie process a real guide and generate a full Draft2Digital submission, 
+        live, end to end? I'll walk you through the running system on a free 15-minute call.
+      </p>
+      <a href="https://calendly.com/danish-ahmed-1623/ai-publishing-assistant-free-15-min-discovery-call" target="_blank" rel="noopener" class="oc-btn-gold">
+        📅 Book a Live Walkthrough
+      </a>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── CERT ── -->
+  <div class="oc-section">
+    <div class="oc-s-label"><span>Delivery Record</span></div>
+    <h2 class="oc-s-title">What was<br><em>delivered</em></h2>
+    <div class="oc-cert">
+      <div class="oc-cert-header">
+        <div>
+          <div class="oc-cert-title">Phase 1 delivery record</div>
+          <div class="oc-cert-sub">Phase 1, OpenClaw (Clawdbot) · Certified March 3, 2026</div>
+        </div>
+        <div class="oc-cert-stamp">
+          <div class="oc-cert-stamp-num">27/27</div>
+          <div class="oc-cert-stamp-lbl">Deliverables<br>Delivered</div>
+        </div>
+      </div>
+      <div class="oc-cert-grid">
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Project</div><div class="oc-cert-item-val">OpenClaw (Clawdbot), AI Publishing Assistant</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Client</div><div class="oc-cert-item-val">Stevie J Travel Inc., Las Vegas NV</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Scope</div><div class="oc-cert-item-val">Phase 1 (27 deliverables) + Phase 2 (13 features)</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Delivered</div><div class="oc-cert-item-val">March 3, 2026, 3 days (proposed: 2 weeks)</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Server</div><div class="oc-cert-item-val">Private hardened VPS</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">AI Model</div><div class="oc-cert-item-val">claude-opus-4-6 · OpenClaw</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Telegram Bot</div><div class="oc-cert-item-val">Locked to a single authorised Telegram account</div></div>
+        <div class="oc-cert-item"><div class="oc-cert-item-lbl">Support</div><div class="oc-cert-item-val">Ongoing maintenance retainer since April 2026</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── INFRA ── -->
+  <div class="oc-section">
+    <div class="oc-s-label"><span>Infrastructure</span></div>
+    <h2 class="oc-s-title">Production-grade<br><em>security by default</em></h2>
+    <p class="oc-s-sub">Every system runs on your own private VPS, not a shared SaaS platform. Your data never leaves infrastructure you own and control.</p>
+    <div class="oc-infra-grid">
+      <div class="oc-infra-card"><div class="oc-infra-lbl">Private VPS</div><div class="oc-infra-val">Private hardened VPS<br><span>24/7 · auto-restart · 30-day backups</span></div></div>
+      <div class="oc-infra-card"><div class="oc-infra-lbl">Private Network</div><div class="oc-infra-val">Tailscale encrypted tunnel<br><span>VPS + Mac Mini · no exposed ports</span></div></div>
+      <div class="oc-infra-card"><div class="oc-infra-lbl">Docker Isolation</div><div class="oc-infra-val">Non-root container user<br><span>Gateway bound to localhost only</span></div></div>
+      <div class="oc-infra-card"><div class="oc-infra-lbl">Automated Backups</div><div class="oc-infra-val">Nightly 2:00am · 30-day rolling retention<br><span>/opt/steviej/backups · auto-cleanup</span></div></div>
+    </div>
+    <div class="oc-sec-grid">
+      <span class="oc-sec-badge">SSH key-only auth</span>
+      <span class="oc-sec-badge">UFW Firewall</span>
+      <span class="oc-sec-badge">Fail2ban brute-force protection</span>
+      <span class="oc-sec-badge">Zero credentials in config files</span>
+      <span class="oc-sec-badge">Tailscale private networking</span>
+      <span class="oc-sec-badge">Non-root Docker user</span>
+      <span class="oc-sec-badge">Protected vs CVE-2026-25253</span>
+      <span class="oc-sec-badge">7-day session logging</span>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── ROADMAP ── -->
+  <div class="oc-section">
+    <div class="oc-s-label"><span>Expansion Roadmap</span></div>
+    <h2 class="oc-s-title">What gets built<br><em>next, and why</em></h2>
+    <p class="oc-s-sub">11 upgrade phases available on the existing infrastructure. Every phase is independent, no new servers, no new hardware required.</p>
+    <div class="oc-phases-grid">
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-high">HIGH Priority</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">File Library Intelligence</div><div class="oc-phase-desc">Find any of 1,015+ files in under 3 seconds by typing plain English in Telegram, from anywhere in the world.</div><div class="oc-phase-price">$1,000 – $4,500</div></div>
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-med">MEDIUM</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">Content Dashboard</div><div class="oc-phase-desc">A secure browser dashboard, full pipeline visibility, D2D queue, social posts, catalog stats, from any device, anywhere.</div><div class="oc-phase-price">$450 one-time</div></div>
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-med">MEDIUM</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">Catalog Auto-Update</div><div class="oc-phase-desc">New guide confirmed published on any platform → Stevie detects it and updates the catalog automatically within 24 hours.</div><div class="oc-phase-price">$200 one-time</div></div>
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-med">MEDIUM</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">Google Calendar</div><div class="oc-phase-desc">Today's events in every morning briefing. Add events by voice. 30-minute reminders. Calendar and AI, unified.</div><div class="oc-phase-price">$200 one-time</div></div>
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-low">LOW</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">SEO & Keyword Research</div><div class="oc-phase-desc">Upgrades keyword generation from AI inference to live Brave Search data, real volumes, trending destinations, gap analysis.</div><div class="oc-phase-price">$250 one-time</div></div>
+      <div class="oc-phase-card"><span class="oc-phase-badge oc-ph-low">LOW</span><div class="oc-phase-id">Available</div><div class="oc-phase-name">Multi-Agent Architecture</div><div class="oc-phase-desc">Dedicated specialist agents for metadata, voice, catalog, email, running in parallel. No queuing as volume scales past 1,500+ guides.</div><div class="oc-phase-price">$600 one-time</div></div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── PRICING ── -->
+  <div class="oc-section" id="oc-pricing">
+    <div class="oc-s-label"><span>Investment</span></div>
+    <h2 class="oc-s-title">Pricing scales with<br><em>scope, not guesswork</em></h2>
+    <p style="font-size:0.85rem;font-weight:300;line-height:1.8;color:rgba(249,245,238,0.55);max-width:640px;margin-bottom:2.2rem;">No flat rate for "an AI assistant", a single Telegram bot and a 17-feature system with email, voice, and browser automation are different builds. Pricing below reflects standard 2026 market rates for custom AI agent development, not marketplace-template pricing.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5px;background:rgba(201,168,76,0.1);border-radius:6px;overflow:hidden;">
+      <div style="background:#0D1B2E;padding:2rem 1.6rem;">
+        <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Starter</div>
+        <div style="font-size:1.7rem;color:var(--ivory);font-family:var(--serif);margin-bottom:0.3rem;">$600</div>
+        <div style="font-size:0.72rem;color:rgba(249,245,238,0.45);margin-bottom:1.2rem;">setup · $200/mo</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;">
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Single-channel bot (Telegram or WhatsApp)</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">One core workflow, one integration</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Secured VPS deployment, Docker hardened</li>
+        </ul>
+      </div>
+      <div style="background:#0D1B2E;padding:2rem 1.6rem;border-top:2px solid var(--gold);">
+        <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Standard</div>
+        <div style="font-size:1.7rem;color:var(--ivory);font-family:var(--serif);margin-bottom:0.3rem;">$2,200</div>
+        <div style="font-size:0.72rem;color:rgba(249,245,238,0.45);margin-bottom:1.2rem;">setup · $300/mo</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;">
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Everything in Starter</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Multi-account email read/reply</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Voice notes to structured output</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">2-3 external tool integrations</li>
+        </ul>
+      </div>
+      <div style="background:#0D1B2E;padding:2rem 1.6rem;">
+        <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Full System</div>
+        <div style="font-size:1.7rem;color:var(--ivory);font-family:var(--serif);margin-bottom:0.3rem;">$4,200</div>
+        <div style="font-size:0.72rem;color:rgba(249,245,238,0.45);margin-bottom:1.2rem;">setup · $400/mo</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;">
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Everything in Standard</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Browser automation / form-fill workflows</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">Data intelligence layer (catalog, monitoring, reporting)</li>
+          <li style="font-size:0.78rem;color:rgba(249,245,238,0.65);padding-left:1rem;position:relative;">5+ integrations, custom dashboards</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:rgba(249,245,238,0.35);margin-top:1rem;">Reference ranges only, exact quote follows a free scoping call based on your actual workflows and integrations.</p>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── FAQ ── -->
+  <div class="oc-section">
+    <div class="oc-s-label"><span>FAQ</span></div>
+    <h2 class="oc-s-title">Common <em>Questions</em></h2>
+    <div class="oc-faq" style="margin-top:2.2rem;">
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">How fast can you actually build and deploy?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>Phase 1 (27 deliverables, full server setup, security hardening, all integrations) was certified complete March 3, 2026, 3 days against a 2-week estimate. Phase 2 (13 features) followed on March 15. Most new systems go live within 3–7 business days.</p></div></div>
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">What does "built on infrastructure you already own" mean?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>Every expansion phase for the Stevie system was built on the Hetzner VPS, Mac Mini, and Tailscale tunnel the client already paid for. No new servers, no new hardware. The system grows on its own foundation, this is how we design from day one.</p></div></div>
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">What tools and platforms do you integrate with?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>Gmail, IONOS, AOL, Outlook, Telegram, WhatsApp Business, Zoho Sheets, Google Drive, OneDrive, Draft2Digital, Brave Search, ElevenLabs, Twilio, and most tools with an API. Your stack is mapped in the discovery call.</p></div></div>
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">Is my data secure?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>Your system runs on your own private server. SSH key-only auth, UFW firewall, Fail2ban, Tailscale private networking, non-root Docker, localhost-only gateway. Zero credentials stored in config files. Also categorically protected against CVE-2026-25253, a February 2026 exploit affecting 40,000+ exposed AI agent instances.</p></div></div>
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">What does it cost?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>Pricing is scoped to what you need. A single-channel bot with one workflow starts around $600. Multi-feature systems with email, voice, and several integrations run $2,000-3,000. Full systems with browser automation and a data intelligence layer run $4,000+. Monthly retainer from $200/month depending on system complexity. Exact quote follows a free 15-minute scoping call, no hidden fees.</p></div></div>
+      <div class="oc-faq-item"><button class="oc-faq-q" onclick="toggleOCFaq(this)"><span class="oc-faq-qt">Do I need technical knowledge to use it?</span><span class="oc-faq-ic">+</span></button><div class="oc-faq-a"><p>No. The interface is Telegram, WhatsApp, or voice. Full documentation, a plain-English daily use guide, testing guide, and walkthroughs delivered at handover. The client manages 17 live features without any engineering background.</p></div></div>
+    </div>
+  </div>
+
+  <div class="oc-divider"></div>
+
+  <!-- ── CTA ── -->
+  <div class="oc-section">
+    <div class="oc-cta-box">
+      <h2 class="oc-cta-title">Let's build your<br><em>AI system</em> this week</h2>
+      <p class="oc-cta-sub">A 30-minute discovery call costs you nothing. You'll leave with a clear picture of what's possible, what it costs, and how fast it can be done.</p>
+      <div class="oc-perks">
+        <span class="oc-perk">Map your highest-value automations</span>
+        <span class="oc-perk">Realistic timeline & cost estimate</span>
+        <span class="oc-perk">No sales pressure, no jargon</span>
+        <span class="oc-perk">Walk away with clarity either way</span>
+      </div>
+      <a href="https://calendly.com/danish-ahmed-1623/ai-publishing-assistant-free-15-min-discovery-call" target="_blank" rel="noopener" class="oc-book-btn">
+        📅 Book Your Free Discovery Call
+      </a>
+      <div class="oc-cta-note">Or WhatsApp: +92 312 216 6636 · Responds within 2 hours</div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <button class="oc-back" onclick="closeOCPage()">← Back to Portfolio</button>
+    </div>
+  </div>
+
+<!-- ═══ END OPENCLAW ═══ -->
+</div>
 
 
 <script>
