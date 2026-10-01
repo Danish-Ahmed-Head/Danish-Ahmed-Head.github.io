@@ -17,12 +17,13 @@ end-to-end automation deployed on hardened infrastructure. Available for global 
 
 | Project | What it is | Result |
 |---|---|---|
-| **OpenClaw / Stevie** | 24/7 AI publishing assistant for a travel author | 27 features in 3 days · 1,088-guide catalog automated |
+| **OpenClaw / Stevie** | 24/7 AI publishing assistant for a travel author | 27 deliverables in 3 days · 1,085+ guide catalogue |
 | **EasyWood WhatsApp Agent** | AI order-handling agent (Latvia) | Standard orders handled end-to-end, zero human intervention |
-| **Blink** | RAG policy assistant | Top 3, KIET FYP Showcase · faster policy lookups |
+| **Blink** | RAG policy assistant | Top 5, KIET FYP Showcase 2025 · fully offline, role-scoped answers |
 | **AQI Forecasting** | ML air-quality forecasting system | Live 72-hour forecasts (Ridge Regression) |
 | **Healthcare Translation** | Real-time speech-to-text medical translation web app | Deployed live |
-| **AKU Power BI Audit** | Clinical data audit across 5 departments | ~20% data-accuracy improvement |
+| **AKU Power BI Documentation** | User guides and technical documentation for 9 institutional dashboards | Tutorial video, presented to the Director of IDAR |
+| **Barakah Abaya** | Production e-commerce platform (Next.js 16, Payload CMS, PostgreSQL) | 31 audit fixes · 56 E2E + 245 unit tests |
 
 ## Tech
 
