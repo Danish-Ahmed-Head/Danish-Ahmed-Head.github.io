@@ -17,9 +17,9 @@ end-to-end automation deployed on hardened infrastructure. Available for global 
 
 | Project | What it is | Result |
 |---|---|---|
-| **OpenClaw / Stevie** | 24/7 AI publishing assistant for a travel author | 27 deliverables in 3 days · 1,085+ guide catalogue |
-| **EasyWood WhatsApp Agent** | AI order-handling agent (Latvia) | Standard orders handled end-to-end, zero human intervention |
-| **Blink** | RAG policy assistant | Top 5, KIET FYP Showcase 2025 · fully offline, role-scoped answers |
+| **OpenClaw** | 24/7 AI publishing assistant for a US travel-guide publisher | 27 deliverables in 3 days |
+| **WhatsApp AI Agent** | AI order-handling agent for a Latvian e-commerce client | Lead qualification, stock lookup and offers, with human handoff for payment |
+| **Blink** | RAG policy assistant | Top 5, KIET FYP Showcase 2025 · locally run LLM, role-scoped answers |
 | **AQI Forecasting** | ML air-quality forecasting system | Live 72-hour forecasts (Ridge Regression) |
 | **Healthcare Translation** | Real-time speech-to-text medical translation web app | Deployed live |
 | **AKU Power BI Documentation** | User guides and technical documentation for 9 institutional dashboards | Tutorial video, presented to the Director of IDAR |
